@@ -1,0 +1,243 @@
+@import "bootstrap";
+
+/*------ Google font imports -----*/
+@import url(http://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300);
+
+
+
+/*------------layout-----------------*/
+
+.alert {
+	margin-top: 60px;
+	margin-bottom: 0px;
+}
+
+/*-------- index page -------------*/
+
+.index-box {
+	padding-top: 200px;
+}
+
+/*-------- profile page / users show ---------*/
+
+.profilebox {
+	padding-top: 100px;
+}
+
+.editprofilebox {
+	padding-top: 200px;
+}
+
+.profile-title-box {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.profile-container {
+	padding-bottom: 70px;
+	padding-top: 70px;
+}
+
+.profile-image-box {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+}
+
+.profile-info-box {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 25px;
+}
+
+.profile-extra-box {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+
+
+/*----header-----*/
+
+
+.navbar {
+	margin: 0px;
+	border-bottom: 0px;
+}
+
+.navbar-inverse {
+	background-color: #d9534f;
+}
+.navbar-inverse .navbar-header .navbar-brand {
+  color: white;
+  padding-left: 25px;
+  padding-top: 10px;
+  font-size: 36px;
+  font-family: 'Lobster', cursive;
+}
+
+.navbar-container-right .navbar-right > li > a {
+	color: white;
+}
+
+.navbar-container-right .navbar-right > li > a:hover {
+	color: black;
+}
+
+.container-fluid {
+	padding-top: 10px;
+}
+
+
+/*---- footer ------*/
+
+.footer {
+	background-color: #d9534f;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.bottom-container {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+}
+
+
+.footer-img {
+	padding-left: 15px;
+	padding-right: 15px;
+	-webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+    border-radius: 50%;
+}
+
+
+.footer-img:hover{
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
+.bottom {
+  color: white;
+  padding-top: 20px;
+  font-size: 36px;
+  font-family: 'Lobster', cursive;
+}
+
+
+/*---------------Landing---------------------*/
+
+/*----banner----*/
+
+.banner{
+    background-image: image-url('fourth.jpg');
+    height: 680px;
+	margin-top: 0px;
+    background-attachment:fixed;
+    background-size:cover;
+}
+
+.banner-content {
+	text-align: center;
+	font-family: 'Open Sans Condensed', sans-serif; 
+	padding-top: 150px;
+	padding-bottom: 150px;
+	color: white;
+}
+
+.logo {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.opening-text {
+	padding-top: 45px;
+	font-size: 45px;
+	text-shadow: 1px 1px 1px #666666;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.opening-text-name {
+	font-size: 56px;
+  	font-family: 'Lobster', cursive;
+  	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sub-opening-text {
+	font-size: 35px;
+	text-shadow: 1px 1px 1px #666666;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/*---- features ------*/
+
+
+.big-container {
+	background-color: white;
+}
+
+.mid-text-container {
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+}
+
+.media-img{   
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+    border-radius: 50%; 
+    padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+.media-img:hover{
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+}
+
+
+.service-box {
+    text-align:center;
+    padding-bottom: 70px;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+}
+
+.service-box h2 {
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+.service-box p {
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	font-weight: normal;
+}
+
+
+
+
+

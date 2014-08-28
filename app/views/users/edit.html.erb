@@ -1,0 +1,38 @@
+<div class="editprofilebox">
+
+This is the edit profile page
+
+<%= form_for @user, :html => { :role => 'form', :class => 'new-contest-form', :multipart => true } do |f| %>
+
+	<div class="form-inputs">
+
+		<div class: "form-group">
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name, class: "form-control", placeholder:"Type your update title here" %>
+		</div>
+
+		<div class: "form-group">
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name, class: "form-control", placeholder:"Type your update title here" %>
+		</div>
+
+		<div class: "form-group">
+		<%= f.label :profile_image %>
+		<%= f.file_field :image, class: "form-control", placeholder:"Type your update title here" %>
+		</div>
+
+	</div>
+	
+	<div class="form-actions">
+	  <%= f.button :submit, class: "btn btn-default btn-lg" %>
+	</div>
+
+<% end %>
+
+
+</div>
+
+
+
+
+</div>

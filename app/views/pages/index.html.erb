@@ -1,0 +1,61 @@
+<div class="index-box">
+
+This is index page, linking you to
+
+<%= link_to 'about', about_path %>
+
+page
+
+</br>
+</br>
+</br>
+</br>
+---------------
+</br>
+</br>
+
+All users:
+
+<div class="row">
+
+	<div class="other-box col-sm-6">
+		<p>Random text!!!</p>
+	</div>
+
+	<div class="index-user-container col-sm-6">
+		<div class="row">
+			<% @users.each do |user| %>
+				<div class="index-picture col-sm-4">
+					<%= image_tag user.image.thumb('150x185#').url if user.image_stored? %>
+				</div>
+				<div class="index-info-box col-sm-8">
+				    <%= user.first_name %>
+					</br>
+				    <%= user.last_name %>
+				    </br>
+				    <%= user.email %>
+				    </br>
+				    <%= link_to 'Go to profile', user_path(@user) %>
+				</div>    
+			<% end %>
+		</div>
+	</div>
+
+</div>
+
+</br>
+</br>
+</br>
+</br>
+---------------
+
+</br>
+</br>
+
+
+
+Complete your profile here:
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+
+</div>
