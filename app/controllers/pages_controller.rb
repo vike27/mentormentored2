@@ -8,4 +8,10 @@ class PagesController < ApplicationController
 		@user = User.find(current_user)
 	end
 
+	def about
+	end
+
+	def contact
+	end
+
 end

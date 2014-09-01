@@ -4,8 +4,8 @@
 <div class="banner">
   <div class="banner-content">
 
-        <div class='logo-image'>
-        <%= image_tag("whitenetwork_cutout.png", alt: "logo-image", class:'img-responsive logo') %>
+        <div class='logo'>
+        <%= image_tag("whitenetwork_cutout3.png", alt: "logo-image", class:'img-responsive logo') %>
         </div>
 
 		<div class='opening-text'>
@@ -14,7 +14,22 @@
 		<div class="sub-opening-text"> 
 			A new kind of matching service that's dedicated to flexible education
 		</div>
+        <div class="sign-up-buttons">
+          <button type="button" class="sign-in-button-container1 btn btn-lg">  
+                <% if current_user.present? %>
+                    <%= link_to 'Sign Out',destroy_user_session_path, :method => :delete %>
+                <% else %>
+                    <%= link_to 'Sign In Now!', new_user_session_path %>
+                
+         </button>
+         <button type="button" class="sign-in-button-container2 btn btn-default btn-lg">
+               <%= link_to 'Register Now!', new_user_registration_path %>
+               <% end %>
+         </button>
+        </div>
 
+         
+        
 
   </div>
 </div>
@@ -27,7 +42,7 @@
 
     <div class="mid-text-container">
         <h1>Mentor Mentored</h1>
-          <p>Mentoring the next generation</p>
+          <p>“Tell me and I forget, teach me and I may remember, involve me and I learn.”</p>
     </div>
 
 
@@ -53,7 +68,7 @@
                 Search
             </h2>
             <p>
-                View our automatically generated list of suggestions (A list of Mentors if you're a Mentee and a list of Mentees if you're a Mentor) as well as do manual searches based on different criteria.  
+                View our automatically generated list of suggestions (A list of Mentors & Mentees) and do manual searches based on different criteria.  
             </p>
         </div>
 
@@ -65,7 +80,7 @@
                 Educate
             </h2>
             <p>
-                When you find and connect to a good match, the contact information for each user is exchanged. From there, you have complete freedom to plan and educate.Allons-y!
+                Contact information is exchanged when you find a good match. From there, you have complete freedom to plan and educate!
             </p>
         </div>
 

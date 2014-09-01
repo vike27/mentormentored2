@@ -89,7 +89,7 @@
 }
 
 .navbar-inverse {
-	background-color: #d9534f;
+	background-color: #50b4c3;
 }
 .navbar-inverse .navbar-header .navbar-brand {
   color: white;
@@ -101,6 +101,9 @@
 
 .navbar-container-right .navbar-right > li > a {
 	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: bold; 
 }
 
 .navbar-container-right .navbar-right > li > a:hover {
@@ -115,7 +118,7 @@
 /*---- footer ------*/
 
 .footer {
-	background-color: #d9534f;
+	background-color: #50b4c3;
 	padding-top: 40px;
 	padding-bottom: 30px;
 }
@@ -156,7 +159,7 @@
 /*----banner----*/
 
 .banner{
-    background-image: image-url('fourth.jpg');
+    background-image: image-url('fifth.png');
     height: 680px;
 	margin-top: 0px;
     background-attachment:fixed;
@@ -166,7 +169,7 @@
 .banner-content {
 	text-align: center;
 	font-family: 'Open Sans Condensed', sans-serif; 
-	padding-top: 150px;
+	padding-top: 80px;
 	padding-bottom: 150px;
 	color: white;
 }
@@ -200,6 +203,27 @@
 	padding-right: 10px;
 }
 
+.sign-up-buttons {
+	padding-top: 25px;
+	font-weight: bold;
+}
+
+.sign-in-button-container1 {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: bold;
+	background-color: #50b4c3;
+}
+
+.sign-in-button-container1 > a {
+	color: white;
+}
+
+.sign-in-button-container2 {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: bold;
+}
 
 /*---- features ------*/
 

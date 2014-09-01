@@ -29,7 +29,8 @@ class UsersController < ApplicationController
 
 
 	def user_params
-	  params.require(:user).permit(:first_name, :last_name, :email, :password, :image)
+	  params.require(:user).permit(:first_name, :last_name, :email, :password, :image, :twitter, :monday, :mondaytime1, :mondaytime2, :tuesday, :tuesdaytime1, :tuesdaytime2, :wednesday, :wednesdaytime1, :wednesdaytime2, :thursday, :thursdaytime1, :thursdaytime2, :friday, :fridaytime1, :fridaytime2, :saturday, :saturdaytime1, :saturdaytime2, :sunday, :sundaytime1, :sundaytime2)
 	end
+
 
 end
