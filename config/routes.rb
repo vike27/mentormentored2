@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   match '/about',   to: 'pages#about',   via: 'get'
   match '/index',   to: 'pages#index',   via: 'get'
-  
 
   resources :users
 

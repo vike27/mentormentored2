@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827232125) do
+ActiveRecord::Schema.define(version: 20140831221241) do
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,28 @@ ActiveRecord::Schema.define(version: 20140827232125) do
     t.string   "last_name"
     t.string   "image_uid"
     t.string   "image_name"
+    t.text     "twitter"
+    t.boolean  "monday"
+    t.text     "mondaytime1"
+    t.text     "mondaytime2"
+    t.boolean  "tuesday"
+    t.text     "tuesdaytime1"
+    t.text     "tuesdaytime2"
+    t.boolean  "wednesday"
+    t.text     "wednesdaytime1"
+    t.text     "wednesdaytime2"
+    t.boolean  "thursday"
+    t.text     "thursdaytime1"
+    t.text     "thursdaytime2"
+    t.boolean  "friday"
+    t.text     "fridaytime1"
+    t.text     "fridaytime2"
+    t.boolean  "saturday"
+    t.text     "saturdaytime1"
+    t.text     "saturdaytime2"
+    t.boolean  "sunday"
+    t.text     "sundaytime1"
+    t.text     "sundaytime2"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

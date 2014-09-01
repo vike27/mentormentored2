@@ -23,8 +23,9 @@ All users:
 	</div>
 
 	<div class="index-user-container col-sm-6">
+		<% @users.each do |user| %>
 		<div class="row">
-			<% @users.each do |user| %>
+			
 				<div class="index-picture col-sm-4">
 					<%= image_tag user.image.thumb('150x185#').url if user.image_stored? %>
 				</div>
@@ -37,8 +38,9 @@ All users:
 				    </br>
 				    <%= link_to 'Go to profile', user_path(@user) %>
 				</div>    
-			<% end %>
+			
 		</div>
+		<% end %>
 	</div>
 
 </div>

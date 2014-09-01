@@ -21,6 +21,45 @@ This is the edit profile page
 		<%= f.file_field :image, class: "form-control", placeholder:"Type your update title here" %>
 		</div>
 
+		<div class: "form-group">
+		<%= f.label :twitter %>
+		<%= f.text_field :twitter, class: "form-control", placeholder:"Type your update title here" %>
+		</div>
+
+		<div class: "form-group">
+		<%= f.label :days_and_Time %>
+		</br>
+		<%= f.label :Monday %>
+		<%= f.check_box :monday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :mondaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :mondaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Tuesday %>
+		<%= f.check_box :tuesday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :tuesdaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :tuesdaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Wednesday %>
+		<%= f.check_box :wednesday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :wednesdaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :wednesdaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Thursday %>
+		<%= f.check_box :thursday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :thursdaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :thursdaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Friday %>
+		<%= f.check_box :friday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :fridaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :fridaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Saturday %>
+		<%= f.check_box :saturday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :saturdaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :saturdaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.label :Sunday %>
+		<%= f.check_box :sunday, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :sundaytime1, class: "form-control", placeholder:"Type your update title here" %>
+		<%= f.time_field :sundaytime2, class: "form-control", placeholder:"Type your update title here" %>
+		</div>
+
+
 	</div>
 	
 	<div class="form-actions">
