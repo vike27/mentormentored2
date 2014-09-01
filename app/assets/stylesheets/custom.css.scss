@@ -24,10 +24,6 @@
 	padding-top: 100px;
 }
 
-.editprofilebox {
-	padding-top: 200px;
-}
-
 .profile-title-box {
 	margin-left: auto;
     margin-right: auto;
@@ -62,6 +58,29 @@
 	font-size: 25px;
 	padding-top: 5px;
 	padding-bottom: 30px;
+}
+
+
+/*------edit profile -------*/
+
+.editprofilebox {
+	margin-top: 100px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+
+.editprofilebox > h1 {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:center;
+}
+
+.time-box {
+	width: 100px;
+}
+
+.time-checkbox {
+	text-align: left;
 }
 
 
@@ -385,3 +404,36 @@
 	margin-right: auto;	
 	width: 1200px;
 }
+
+/*----- Sign in ------*/
+
+.sign-in-box {
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;	
+	width: 300px;
+	padding-bottom: 50px;
+}
+
+.sign-in-form {
+	padding-top: 25px;
+}
+
+.remember-box {
+	padding-top: 20px;
+}
+
+/*----- Registration ------*/
+
+.registration-box {
+	margin-top: 70px;
+	margin-left: auto;
+	margin-right: auto;	
+	width: 300px;
+	padding-bottom: 50px;
+}
+
+.registration-form {
+	padding-top: 25px;
+}
+
