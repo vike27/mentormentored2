@@ -331,4 +331,57 @@
 
 
 
+/*---- FAQ Page -----*/
 
+.faq-container {
+	margin-top: 70px;
+	padding-bottom: 20px;
+}
+
+.faq-container > h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.panel-title {
+	color: #50b4c3;
+}
+
+.panel-default {
+	margin-left: 30px;
+	margin-right: 30px;;
+}
+
+/*---- About Page -----*/
+
+.about-container {
+	margin-top: 70px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about-container > h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.about-profile-containers {
+	width: 500px;
+	margin-bottom: 20px;
+    font-size: 14px; 
+}
+
+.about-fluid-container {
+	margin-left: auto;
+	margin-right: auto;	
+	width: 1200px;
+}
