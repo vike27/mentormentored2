@@ -8,6 +8,13 @@ class UsersController < ApplicationController
 	end
 
 	def index
+    if params[:search].present?
+      @users = User.search(params[:search])
+      params[:search][:time_availability] = nil
+    else
+      params[:search] = {}
+      @users = []
+    end
 	end
 
 	def edit
@@ -27,9 +34,12 @@ class UsersController < ApplicationController
 	def destroy
 	end
 
-
 	def user_params
-	  params.require(:user).permit(:first_name, :last_name, :email, :password, :image, :twitter, :monday, :mondaytime1, :mondaytime2, :tuesday, :tuesdaytime1, :tuesdaytime2, :wednesday, :wednesdaytime1, :wednesdaytime2, :thursday, :thursdaytime1, :thursdaytime2, :friday, :fridaytime1, :fridaytime2, :saturday, :saturdaytime1, :saturdaytime2, :sunday, :sundaytime1, :sundaytime2)
+	  params.require(:user).permit(:first_name, :last_name, :email, :password, :image, :twitter, :monday,
+                                 :mondaytime1, :mondaytime2, :tuesday, :tuesdaytime1, :tuesdaytime2, :wednesday,
+                                 :wednesdaytime1, :wednesdaytime2, :thursday, :thursdaytime1, :thursdaytime2,
+                                 :friday, :fridaytime1, :fridaytime2, :saturday, :saturdaytime1, :saturdaytime2,
+                                 :sunday, :sundaytime1, :sundaytime2, :job_title, :location, :industry)
 	end
 
 
