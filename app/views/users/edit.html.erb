@@ -43,7 +43,24 @@
                 <div class=form-group">
                   <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
                 </div>
-              </div>
+
+                <div class=form-group">
+                  <%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
+                </div>
+
+                <div class="form-group">
+                  <%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
+                </div>
+
+                <div class=form-group">
+                  <%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
+                </div>
+
+               <div class="form-group">
+                 <%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
+               </div>
+
+          </div>
 
               <h3> time available </h3>
 
@@ -90,5 +107,6 @@
       <% end %>
     </div>
   </div>
+
 
 </div>

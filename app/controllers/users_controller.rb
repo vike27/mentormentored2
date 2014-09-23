@@ -39,8 +39,9 @@ class UsersController < ApplicationController
                                  :mondaytime1, :mondaytime2, :tuesday, :tuesdaytime1, :tuesdaytime2, :wednesday,
                                  :wednesdaytime1, :wednesdaytime2, :thursday, :thursdaytime1, :thursdaytime2,
                                  :friday, :fridaytime1, :fridaytime2, :saturday, :saturdaytime1, :saturdaytime2,
-                                 :sunday, :sundaytime1, :sundaytime2, :job_title, :location, :industry)
+                                 :sunday, :sundaytime1, :sundaytime2, :job_title, :location, :industry,
+                                 :occupation, :gender, :years_of_experience, :work_history)
 	end
 
-
+  
 end

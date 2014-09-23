@@ -19,6 +19,42 @@ All users:
 <div class="row">
 
 	<div class="other-box col-sm-6">
+		<div class: "form-group">
+							<%= text_field.tag %>
+		</div>
+	</div>
+
+	<div class="index-user-container col-sm-6">
+		<% @users.each do |user| %>
+		<div class="row">
+			
+				<div class="index-picture col-sm-4">
+					<%= image_tag user.image.thumb('150x185#').url if user.image_stored? %>
+				</div>
+				<div class="index-info-box col-sm-8">
+				    <%= user.first_name %>
+					</br>
+				    <%= user.last_name %>
+				    </br>
+				    <%= user.email %>
+				    </br>
+				    <%= link_to 'Go to profile', user_path(@user) %>
+				</div>    
+			
+		</div>
+		<% end %>
+	</div>
+
+</div>
+
+</br>
+</br>
+</br>
+</br>
+
+<div class="row">
+
+	<div class="other-box col-sm-6">
 		<p>Random text!!!</p>
 	</div>
 

@@ -55,9 +55,14 @@ ActiveRecord::Schema.define(version: 20140921164012) do
     t.string   "job_title"
     t.string   "industry"
     t.string   "location"
+    t.string   "occupation"
+    t.string   "gender"
+    t.string   "work_history"
+    t.decimal  "years_of_experience"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
 
 end
