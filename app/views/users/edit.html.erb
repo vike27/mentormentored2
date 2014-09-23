@@ -24,9 +24,7 @@
 
 							<div class: "form-group">
 							<%= f.label :profile_image, class: "control-label" %>
-							
 							<%= f.file_field :image, class: "profile-picture-upload" %>
-							
 							</div>
 
 						</div>
@@ -37,6 +35,22 @@
 							<div class: "form-group">
 							<%= f.label :twitter %>
 							<%= f.text_field :twitter, class: "form-control", placeholder:"Type your update title here" %>
+							</div>
+
+							<div class: "form-group">
+							<%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
+							</div>
+
+							<div class: "form-group">
+							<%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
+							</div>
+
+							<div class: "form-group">
+							<%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
+							</div>
+
+							<div class: "form-group">
+							<%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
 							</div>
 						</div>
 
@@ -50,31 +64,31 @@
 											<%= f.time_field :mondaytime2, class: "form-control time-box" %>
 											<%= f.label :Tuesday %>
 											<%= f.check_box :tuesday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :tuesdaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :tuesdaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.time_field :tuesdaytime1, class: "form-control time-box" %>
+											<%= f.time_field :tuesdaytime2, class: "form-control time-box" %>
 											<%= f.label :Wednesday %>
-											<%= f.check_box :wednesday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :wednesdaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :wednesdaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.check_box :wednesday, class: "time-checkbox" %>
+											<%= f.time_field :wednesdaytime1, class: "form-control time-box" %>
+											<%= f.time_field :wednesdaytime2, class: "form-control time-box" %>
 											<%= f.label :Thursday %>
-											<%= f.check_box :thursday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :thursdaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :thursdaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.check_box :thursday, class: "time-checkbox" %>
+											<%= f.time_field :thursdaytime1, class: "form-control time-box" %>
+											<%= f.time_field :thursdaytime2, class: "form-control time-box" %>
 										
 						</div>
 						<div class:"col-sm-2">
 											<%= f.label :Friday %>
-											<%= f.check_box :friday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :fridaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :fridaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.check_box :friday, class: "time-checkbox" %>
+											<%= f.time_field :fridaytime1, class: "form-control time-box" %>
+											<%= f.time_field :fridaytime2, class: "form-control time-box" %>
 											<%= f.label :Saturday %>
-											<%= f.check_box :saturday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :saturdaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :saturdaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.check_box :saturday, class: "time-checkbox" %>
+											<%= f.time_field :saturdaytime1, class: "form-control time-box" %>
+											<%= f.time_field :saturdaytime2, class: "form-control time-box" %>
 											<%= f.label :Sunday %>
-											<%= f.check_box :sunday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :sundaytime1, class: "form-control time-box", placeholder:"Type your update title here" %>
-											<%= f.time_field :sundaytime2, class: "form-control time-box", placeholder:"Type your update title here" %>
+											<%= f.check_box :sunday, class: "time-checkbox" %>
+											<%= f.time_field :sundaytime1, class: "form-control time-box" %>
+											<%= f.time_field :sundaytime2, class: "form-control time-box" %>
 								
 						</div>
 
