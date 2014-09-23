@@ -1,108 +1,111 @@
 <div class="editprofilebox">
 
-	<h1>Take a moment to fill out your profile:</h1>
+  <h1>Take a moment to fill out your profile:</h1>
 
-	<div class="container-fluid">
-  		
-
-			<div class="edit-profile-form">
-				<%= form_for @user, :html => { :role => 'form', :class => 'form-horizontal', :multipart => true } do |f| %>
-
-					<div class="form-inputs">
-					<div class="row">
+  <div class="container-fluid">
 
 
-						<div class= "col-sm-4">
+    <div class="edit-profile-form">
+      <%= form_for @user, :html => {:role => 'form', :class => 'form-horizontal', :multipart => true} do |f| %>
 
-							<div class: "form-group">
-							<%= f.text_field :first_name, class: "form-control", placeholder:"First Name" %>
-							</div>
+          <div class="form-inputs">
+            <div class="row">
 
-							<div class: "form-group">
-							<%= f.text_field :last_name, class: "form-control", placeholder:"Last Name" %>
-							</div>
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+                </div>
 
-							<div class: "form-group">
-							<%= f.label :profile_image, class: "control-label" %>
-							<%= f.file_field :image, class: "profile-picture-upload" %>
-							</div>
+                <div class=form-group">
+                  <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+                </div>
 
-						</div>
+                <div class="form-group">
+                  <%= f.label :profile_image, class: "control-label" %>
+                  <%= f.file_field :image, class: "profile-picture-upload" %>
+                </div>
+              </div>
 
-						
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <%= f.label :twitter %>
+                  <%= f.text_field :twitter, class: "form-control" %>
+                </div>
 
-						<div class= "col-sm-4">
-							<div class: "form-group">
-							<%= f.label :twitter %>
-							<%= f.text_field :twitter, class: "form-control", placeholder:"Type your update title here" %>
-							</div>
+                <div class=form-group">
+                  <%= f.text_field :industry, class: "form-control", placeholder: "Industry" %>
+                </div>
 
-							<div class: "form-group">
-							<%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
-							</div>
+                <div class=form-group">
+                  <%= f.text_field :job_title, class: "form-control", placeholder: "Job Title" %>
+                </div>
 
-							<div class: "form-group">
-							<%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
-							</div>
+                <div class=form-group">
+                  <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
+                </div>
 
-							<div class: "form-group">
-							<%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
-							</div>
+                <div class=form-group">
+                  <%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
+                </div>
 
-							<div class: "form-group">
-							<%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
-							</div>
-						</div>
+                <div class="form-group">
+                  <%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
+                </div>
 
-									<h3> time available </h3>
-								
-						<div class="col-sm-2">
-									
-											<%= f.label :Monday %>
-											<%= f.check_box :monday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :mondaytime1, class: "form-control time-box"%>
-											<%= f.time_field :mondaytime2, class: "form-control time-box" %>
-											<%= f.label :Tuesday %>
-											<%= f.check_box :tuesday, class: "time-checkbox", placeholder:"Type your update title here" %>
-											<%= f.time_field :tuesdaytime1, class: "form-control time-box" %>
-											<%= f.time_field :tuesdaytime2, class: "form-control time-box" %>
-											<%= f.label :Wednesday %>
-											<%= f.check_box :wednesday, class: "time-checkbox" %>
-											<%= f.time_field :wednesdaytime1, class: "form-control time-box" %>
-											<%= f.time_field :wednesdaytime2, class: "form-control time-box" %>
-											<%= f.label :Thursday %>
-											<%= f.check_box :thursday, class: "time-checkbox" %>
-											<%= f.time_field :thursdaytime1, class: "form-control time-box" %>
-											<%= f.time_field :thursdaytime2, class: "form-control time-box" %>
-										
-						</div>
-						<div class:"col-sm-2">
-											<%= f.label :Friday %>
-											<%= f.check_box :friday, class: "time-checkbox" %>
-											<%= f.time_field :fridaytime1, class: "form-control time-box" %>
-											<%= f.time_field :fridaytime2, class: "form-control time-box" %>
-											<%= f.label :Saturday %>
-											<%= f.check_box :saturday, class: "time-checkbox" %>
-											<%= f.time_field :saturdaytime1, class: "form-control time-box" %>
-											<%= f.time_field :saturdaytime2, class: "form-control time-box" %>
-											<%= f.label :Sunday %>
-											<%= f.check_box :sunday, class: "time-checkbox" %>
-											<%= f.time_field :sundaytime1, class: "form-control time-box" %>
-											<%= f.time_field :sundaytime2, class: "form-control time-box" %>
-								
-						</div>
+                <div class=form-group">
+                  <%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
+                </div>
 
-					</div>
-					</div>
-					
-					<div class="form-actions">
-					  <%= f.button :submit, class: "btn btn-default btn-lg" %>
-					</div>
+               <div class="form-group">
+                 <%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
+               </div>
 
-				<% end %>
-			</div>
+          </div>
 
+              <h3> time available </h3>
 
-		</div>
+              <div class="col-sm-2">
+                <%= f.label :Monday %>
+                <%= f.check_box :monday, class: "time-checkbox" %>
+                <%= f.text_field :mondaytime1, class: "spinner" %>
+                <%= f.text_field :mondaytime2, class: "spinner" %>
+                <%= f.label :Tuesday %>
+                <%= f.check_box :tuesday, class: "time-checkbox" %>
+                <%= f.text_field :tuesdaytime1, class: "spinner" %>
+                <%= f.text_field :tuesdaytime2, class: "spinner" %>
+                <%= f.label :Wednesday %>
+                <%= f.check_box :wednesday, class: "time-checkbox" %>
+                <%= f.text_field :wednesdaytime1, class: "spinner" %>
+                <%= f.text_field :wednesdaytime2, class: "spinner" %>
+                <%= f.label :Thursday %>
+                <%= f.check_box :thursday, class: "time-checkbox" %>
+                <%= f.text_field :thursdaytime1, class: "spinner" %>
+                <%= f.text_field :thursdaytime2, class: "spinner" %>
+              </div>
+
+              <div class="col-sm-2">
+                <%= f.label :Friday %>
+                <%= f.check_box :friday, class: "time-checkbox" %>
+                <%= f.text_field :fridaytime1, class: "spinner" %>
+                <%= f.text_field :fridaytime2, class: "spinner" %>
+                <%= f.label :Saturday %>
+                <%= f.check_box :saturday, class: "time-checkbox" %>
+                <%= f.text_field :saturdaytime1, class: "spinner" %>
+                <%= f.text_field :saturdaytime2, class: "spinner" %>
+                <%= f.label :Sunday %>
+                <%= f.check_box :sunday, class: "time-checkbox" %>
+                <%= f.text_field :sundaytime1, class: "spinner" %>
+                <%= f.text_field :sundaytime2, class: "spinner" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, class: "btn btn-default btn-lg" %>
+          </div>
+
+      <% end %>
+    </div>
+  </div>
 
 </div>
