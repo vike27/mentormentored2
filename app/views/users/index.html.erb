@@ -15,7 +15,7 @@
           <%= label_tag :industry, 'Industry' %>
           <%= text_field_tag 'search[industry]', params[:search][:industry] %>
           <%= label_tag :week_day, 'Week Day' %>
-          <%= select_tag 'search[week_day]', options_for_select(DAYS_HASH.keys, params[:search][:week_day]) %>
+          <%= select_tag 'search[week_day]', options_for_select(DAYS_HASH.keys, params[:search][:week_day]), {:prompt => "Select a day"} %>
           <%= label_tag :time_availability, 'Time Availability' %>
           <%= text_field_tag 'search[time_availability]', params[:search][:time_availability], class: 'spinner' %>
           <%= label_tag :location, 'Location' %>
