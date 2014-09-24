@@ -43,5 +43,4 @@ class UsersController < ApplicationController
                                  :occupation, :gender, :years_of_experience, :work_history)
 	end
 
-  
 end

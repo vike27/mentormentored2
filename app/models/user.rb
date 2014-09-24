@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
     scope.where!("industry LIKE ?", "%#{search[:industry]}%") if search[:industry].present?
     scope.where!("location LIKE ?", "%#{search[:location]}%") if search[:location].present?
     if search[:week_day].present? && search[:time_availability].blank?
-      scope.where!(DAYS_HASH[search[:week_day][0]] => true)
+      debugger
+      scope.where!(DAYS_HASH[search[:week_day]][0] => true)
     elsif search[:week_day].present? && search[:time_availability].present?
       scope.where!(DAYS_HASH[search[:week_day]][0] => true)
       scope = scope.select{|obj| (DateTime.parse(obj.send(DAYS_HASH[search[:week_day]][1])).strftime("%H:%M") < DateTime.parse(search[:time_availability]).strftime("%H:%M")) && (DateTime.parse(obj.send(DAYS_HASH[search[:week_day]][2])).strftime("%H:%M") > DateTime.parse(search[:time_availability]).strftime("%H:%M"))}
