@@ -1,0 +1,23 @@
+<%= form_for :conversation, url: :conversations, html: {class: 'form-horizontal'} do |f| %>
+    <div class="form-inputs">
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_field :recipients, class: "form-control", placeholder: "Recipients" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_field :subject, class: "form-control", placeholder: "Subject" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_area :body, class: "form-control", placeholder: "Body" %>
+        </div>
+      </div>
+      <div class="form-actions">
+        <%= f.submit class: "btn btn-default btn-lg" %>
+        <%= f.submit 'Cancel', type: :reset, class: 'btn-danger' %>
+      </div>
+    </div>
+<% end %>
