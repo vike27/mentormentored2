@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   dragonfly_accessor :image
 
+  acts_as_messageable
+
   def self.search(search)
     scope = User.order(:first_name)
     scope.where!("first_name LIKE ?", "%#{search[:first_name]}%") if search[:first_name].present?
@@ -22,6 +24,10 @@ class User < ActiveRecord::Base
       # scope.where!(DAYS_HASH[search[:week_day]][2] > Time.parse(search[:time_availability]))
     end
     scope
+  end
+
+  def mailboxer_email(object)
+    email
   end
 
 end
