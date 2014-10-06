@@ -16,7 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
-
 $.widget( "ui.timespinner", $.ui.spinner, {
     options: {
         // seconds
@@ -44,3 +43,4 @@ $.widget( "ui.timespinner", $.ui.spinner, {
 $(function() {
     $(".spinner").timespinner();
 });
+

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+    @unread_messages = @user.mailbox.inbox({:read => false}).count
 	end
 
 	def index
