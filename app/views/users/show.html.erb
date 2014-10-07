@@ -1,53 +1,54 @@
 <div class="profilebox">
 
-	<div class="profile-title-box" >
-		<%= @user.first_name %> <%= @user.last_name %> profile
-	</div>
-	<hr>
+  <div class="profile-title-box" >
+    <%= @user.first_name %> <%= @user.last_name %> profile
+  </div>
+  <hr>
 
-<div class="profile-container">
+  <div class="profile-container">
 
-	<div class="row ">
+    <div class="row ">
 
-		<div class="profile-image-box col-sm-4" >
-			<%= image_tag @user.image.thumb('150x185#').url if @user.image_stored? %>
-		</div>
+      <div class="profile-image-box col-sm-4" >
+        <%= image_tag @user.image.thumb('150x185#').url if @user.image_stored? %>
+      </div>
 
-		<div class="profile-info-box col-sm-8">
-			<%= @user.email %>
-			</br>
-			<%= @user.first_name %>
-			</br>
-			<%= @user.last_name %>
-			</br>
-			<%= @user.occupation %>
-			</br>
-			<%= @user.gender %>
-			</br>
-			<%= @user.work_history %>
-			</br>
-			<%= @user.years_of_experience %>
-			</br>
-            <%= link_to 'Start Conversation', :new_conversation %>
-            </br>
-            <% if @user == current_user %>
-              <%= link_to conversations_path  do %>
-                Inbox
-                <span class="badge"><%= @unread_messages %></span>
-              <% end %>
-            <% end %>
-		</div>
+      <div class="profile-info-box col-sm-8">
+        <%= @user.email %>
+        </br>
+        <%= @user.first_name %>
+        </br>
+        <%= @user.last_name %>
+        </br>
+        <%= @user.occupation %>
+        </br>
+        <%= @user.gender %>
+        </br>
+        <%= @user.work_history %>
+        </br>
+        <%= @user.years_of_experience %>
+        </br>
+        <% if @user != current_user %>
+          <%= link_to 'Start Conversation', new_conversation_path(user_id: @user) %>
+          </br>
+        <% else %>
+          <%= link_to conversations_path  do %>
+            Inbox
+            <span class="badge"><%= @unread_messages %></span>
+          <% end %>
+        <% end %>
+      </div>
 
-	</div>
+    </div>
 
-</div>
+  </div>
 
-<hr>
+  <hr>
 
-		<div class="profile-extra-box">
-			<h3>Complete your profile here:</h3>
-			<%= link_to 'Edit', edit_user_path(@user) %>
-		</div>
+  <div class="profile-extra-box">
+    <h3>Complete your profile here:</h3>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+  </div>
 
 
 </div>
