@@ -2,7 +2,7 @@
     <div class="form-inputs">
       <div class="row">
         <div class="form-group">
-          <%= f.text_field :recipients, class: "form-control", placeholder: "Recipients" %>
+          <%= f.hidden_field :recipients, value: @user.email %>
         </div>
       </div>
       <div class="row">
