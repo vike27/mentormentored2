@@ -28,6 +28,14 @@
 			</br>
 			<%= @user.years_of_experience %>
 			</br>
+            <%= link_to 'Start Conversation', :new_conversation %>
+            </br>
+            <% if @user == current_user %>
+              <%= link_to conversations_path  do %>
+                Inbox
+                <span class="badge"><%= @unread_messages %></span>
+              <% end %>
+            <% end %>
 		</div>
 
 	</div>

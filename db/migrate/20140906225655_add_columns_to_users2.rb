@@ -3,6 +3,6 @@ class AddColumnsToUsers2 < ActiveRecord::Migration
   	add_column :users, :occupation, :string
   	add_column :users, :gender, :string
   	add_column :users, :work_history, :string
-  	add_column :users, :years_of_experience, :number
+  	add_column :users, :years_of_experience, :integer
   end
 end
