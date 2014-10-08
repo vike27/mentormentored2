@@ -1,5 +1,6 @@
 class ConversationsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :find_user, only: :new
   helper_method :mailbox, :conversation
 
   def create
@@ -28,6 +29,10 @@ class ConversationsController < ApplicationController
   end
 
   private
+
+  def find_user
+    @user = User.find params[:user_id]
+  end
 
   def mailbox
     @mailbox ||= current_user.mailbox
