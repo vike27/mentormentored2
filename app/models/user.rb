@@ -10,14 +10,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  attr_accessor *PRIVATE_ATTRIBUTES
-  attr_accessor :form_submitted
+  attr_accessor *PRIVATE_ATTRIBUTES, :form_submitted
 
   dragonfly_accessor :image
 
   acts_as_messageable
 
-  serialize :private_attrs
+  serialize :private_attrs, Array
 
   before_save :set_private_attributes
 
