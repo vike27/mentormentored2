@@ -28,35 +28,50 @@
 
               <div class="col-sm-4">
                 <div class="form-group">
-                  <%= f.label :twitter %>
-                  <%= f.text_field :twitter, class: "form-control" %>
+                  Private
+                  <%= f.check_box :private_twitter, :checked => @user.private_attrs.include?(:private_twitter) %>
+                  <%= f.text_field :twitter, class: "form-control", placeholder: "Twitter" %>
                 </div>
 
                 <div class=form-group">
+                  Private
+                  <%= f.check_box :private_industry, :checked => @user.private_attrs.include?(:private_industry) %>
                   <%= f.text_field :industry, class: "form-control", placeholder: "Industry" %>
                 </div>
 
                 <div class=form-group">
+                  Private
+                  <%= f.check_box :private_job_title, :checked => @user.private_attrs.include?(:private_job_title) %>
                   <%= f.text_field :job_title, class: "form-control", placeholder: "Job Title" %>
                 </div>
 
                 <div class=form-group">
+                  Private
+                  <%= f.check_box :private_location, :checked => @user.private_attrs.include?(:private_location) %>
                   <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
                 </div>
 
                 <div class=form-group">
+                  Private
+                  <%= f.check_box :private_occupation, :checked => @user.private_attrs.include?(:private_occupation) %>
                   <%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
                 </div>
 
                 <div class="form-group">
+                  Private
+                  <%= f.check_box :private_gender, :checked => @user.private_attrs.include?(:private_gender) %>
                   <%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
                 </div>
 
                 <div class=form-group">
+                  Private
+                  <%= f.check_box :private_work_history, :checked => @user.private_attrs.include?(:private_work_history) %>
                   <%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
                 </div>
 
                <div class="form-group">
+                 Private
+                 <%= f.check_box :private_years_of_experience, :checked => @user.private_attrs.include?(:private_years_of_experience) %>
                  <%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
                </div>
 

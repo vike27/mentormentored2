@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find_by_id(params[:id])
+    @user.form_submitted = true
     if @user.update_attributes(user_params)
       flash[:success] = "User updated successfully!"
       redirect_to user_path
@@ -47,7 +48,10 @@ class UsersController < ApplicationController
                                    :wednesdaytime1, :wednesdaytime2, :thursday, :thursdaytime1, :thursdaytime2,
                                    :friday, :fridaytime1, :fridaytime2, :saturday, :saturdaytime1, :saturdaytime2,
                                    :sunday, :sundaytime1, :sundaytime2, :job_title, :location, :industry,
-                                   :occupation, :gender, :years_of_experience, :work_history)
+                                   :occupation, :gender, :years_of_experience, :work_history,
+                                   :private_twitter, :private_industry, :private_job_title, :private_location,
+                                   :private_occupation, :private_gender, :private_work_history,
+                                   :private_years_of_experience)
     end
 
     def recommend_user
