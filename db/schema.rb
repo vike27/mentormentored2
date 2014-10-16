@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140924090124) do
+ActiveRecord::Schema.define(version: 20141016041228) do
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
     t.integer "unsubscriber_id"
@@ -112,6 +112,7 @@ ActiveRecord::Schema.define(version: 20140924090124) do
     t.string   "gender"
     t.string   "work_history"
     t.decimal  "years_of_experience"
+    t.string   "private_attrs"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
