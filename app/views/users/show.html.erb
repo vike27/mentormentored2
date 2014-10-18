@@ -14,19 +14,19 @@
       </div>
 
       <div class="profile-info-box col-sm-8">
-        <%= @user.email %>
+        <%= show_if_allowed(@user, :email) %>
         </br>
         <%= @user.first_name %>
         </br>
         <%= @user.last_name %>
         </br>
-        <%= @user.occupation %>
+        <%= show_if_allowed(@user, :occupation) %>
         </br>
-        <%= @user.gender %>
+        <%= show_if_allowed(@user, :gender) %>
         </br>
-        <%= @user.work_history %>
+        <%= show_if_allowed(@user, :work_history) %>
         </br>
-        <%= @user.years_of_experience %>
+        <%= show_if_allowed(@user, :years_of_experience) %>
         </br>
         <% if @user != current_user %>
           <%= link_to 'Start Conversation', new_conversation_path(user_id: @user) %>
@@ -47,7 +47,9 @@
 
   <div class="profile-extra-box">
     <h3>Complete your profile here:</h3>
-    <%= link_to 'Edit', edit_user_path(@user) %>
+    <% if current_user == @user %>
+      <%= link_to 'Edit', edit_user_path(@user) %>
+    <% end %>
   </div>
 
 
