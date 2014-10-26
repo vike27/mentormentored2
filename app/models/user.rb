@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
                         :private_years_of_experience]
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
 
   attr_accessor *PRIVATE_ATTRIBUTES, :form_submitted
