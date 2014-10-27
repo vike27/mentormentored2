@@ -405,6 +405,36 @@
 	width: 1200px;
 }
 
+/*---- Contact Page -----*/
+
+.contact-container {
+	margin-top: 70px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-container > h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.contact-boxes {
+	width: 500px;
+	margin-bottom: 20px;
+    font-size: 14px; 
+}
+
+.contact-fluid-container {
+	margin-left: auto;
+	margin-right: auto;	
+	width: 1200px;
+}
+
 /*----- Sign in ------*/
 
 .sign-in-box {
@@ -443,3 +473,48 @@
 	font-size: 14px;
 	line-height: 20px;
 }
+
+
+/*---- Search/Index Page -----*/
+
+.searchbox {
+	margin-top: 70px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.searchbox > h1 {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.search-fluid-container {
+	margin-left: auto;
+	margin-right: auto;	
+	width: 1200px;
+}
+
+.search-fields-boxes {
+
+}
+
+.search-result-boxes {
+	margin-left: 90px;
+}
+
+.formstyle {
+	width: 250px;
+}
+
+.search-button {
+	margin-bottom: 30px;
+}
+
+
+
+
