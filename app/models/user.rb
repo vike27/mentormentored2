@@ -42,6 +42,10 @@ class User < ActiveRecord::Base
     email
   end
 
+  def full_name
+    [first_name, last_name].compact.join(' ')
+  end
+
   # PRIVATE_ATTRIBUTES.each do |attribute_name|
   #   define_method(attribute_name) { private_attrs.include? attribute_name.to_s.match(/private_/).post_match.to_sym }
   # end
