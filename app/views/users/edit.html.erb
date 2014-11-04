@@ -2,126 +2,133 @@
 
   <h1>Take a moment to fill out your profile:</h1>
 
-  <div class="container-fluid">
+  <div class="edit-container edit-fluid-container"> 
+  <%= form_for @user, :html => {:role => 'form', :class => 'form-horizontal', :multipart => true} do |f| %>
 
 
-    <div class="edit-profile-form">
-      <%= form_for @user, :html => {:role => 'form', :class => 'form-horizontal', :multipart => true} do |f| %>
+    <div class="row">
+        <div class="col-md-4 edit-fields-box">
+              <div class="form-inputs">
+                    <div class="form-group">
+                      <%= f.text_field :first_name, class: "form-control edit-field", placeholder: "First Name" %>
+                    </div>
 
-          <div class="form-inputs">
-            <div class="row">
+                    <div class="form-group">
+                      <%= f.text_field :last_name, class: "form-control edit-field", placeholder: "Last Name" %>
+                    </div>
 
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
-                </div>
+                    <div class="form-group">
+                      <%= f.label :profile_image, class: "control-label" %>
+                      <%= f.file_field :image, class: "profile-picture-upload" %>
+                    </div>        
+              </div>
+        </div>
 
-                <div class=form-group">
-                  <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
-                </div>
+        <div class="col-md-8 edit-fields-box">
+              <div class="col-sm-6">
+                    <div class="form-group">
+                      <%= f.text_field :twitter, class: "form-control edit-field", placeholder: "Twitter" %>
+                      Private
+                      <%= f.check_box :private_twitter, :checked => @user.private_attrs.include?(:twitter) %>
+                    </div>
 
-                <div class="form-group">
-                  <%= f.label :profile_image, class: "control-label" %>
-                  <%= f.file_field :image, class: "profile-picture-upload" %>
+                    <div class="form-group">
+                      <%= f.text_field :industry, class: "form-control edit-field", placeholder: "Industry" %>
+                      Private
+                      <%= f.check_box :private_industry, :checked => @user.private_attrs.include?(:industry) %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.text_field :job_title, class: "form-control edit-field", placeholder: "Job Title" %>
+                      Private
+                      <%= f.check_box :private_job_title, :checked => @user.private_attrs.include?(:job_title) %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.text_field :location, class: "form-control edit-field", placeholder: "Location" %>
+                      Private
+                      <%= f.check_box :private_location, :checked => @user.private_attrs.include?(:location) %>
+                    </div>
+              </div>
+
+              <div class="col-sm-6">
+                    <div class="form-group">
+                      <%= f.text_field :occupation, class: "form-control edit-field", placeholder:"Occupation" %>
+                      Private
+                      <%= f.check_box :private_occupation, :checked => @user.private_attrs.include?(:occupation) %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.text_field :gender, class: "form-control edit-field", placeholder:"Gender" %>
+                      Private
+                      <%= f.check_box :private_gender, :checked => @user.private_attrs.include?(:gender) %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.text_field :work_history, class: "form-control edit-field", placeholder:"Work History" %>
+                      Private
+                      <%= f.check_box :private_work_history, :checked => @user.private_attrs.include?(:work_history) %>
+                    </div>
+
+                   <div class="form-group">
+                     <%= f.number_field :years_of_experience, class: "form-control edit-field", placeholder:"years_of_experience" %>
+                     Private
+                     <%= f.check_box :private_years_of_experience, :checked => @user.private_attrs.include?(:years_of_experience) %>
+                   </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 edit-fields-boxes">
+
+                  <h3> time available </h3>
+
+                  <div class="col-sm-3">
+                    <%= f.label :Monday %>
+                    <%= f.check_box :monday, class: "time-checkbox" %>
+                    <%= f.text_field :mondaytime1, class: "spinner" %>
+                    <%= f.text_field :mondaytime2, class: "spinner" %>
+                    <%= f.label :Tuesday %>
+                    <%= f.check_box :tuesday, class: "time-checkbox" %>
+                    <%= f.text_field :tuesdaytime1, class: "spinner" %>
+                    <%= f.text_field :tuesdaytime2, class: "spinner" %>
+                    <%= f.label :Wednesday %>
+                    <%= f.check_box :wednesday, class: "time-checkbox" %>
+                    <%= f.text_field :wednesdaytime1, class: "spinner" %>
+                    <%= f.text_field :wednesdaytime2, class: "spinner" %>
+                    <%= f.label :Thursday %>
+                    <%= f.check_box :thursday, class: "time-checkbox" %>
+                    <%= f.text_field :thursdaytime1, class: "spinner" %>
+                    <%= f.text_field :thursdaytime2, class: "spinner" %>
+                  </div>
+
+                  <div class="col-sm-3">
+                    <%= f.label :Friday %>
+                    <%= f.check_box :friday, class: "time-checkbox" %>
+                    <%= f.text_field :fridaytime1, class: "spinner" %>
+                    <%= f.text_field :fridaytime2, class: "spinner" %>
+                    <%= f.label :Saturday %>
+                    <%= f.check_box :saturday, class: "time-checkbox" %>
+                    <%= f.text_field :saturdaytime1, class: "spinner" %>
+                    <%= f.text_field :saturdaytime2, class: "spinner" %>
+                    <%= f.label :Sunday %>
+                    <%= f.check_box :sunday, class: "time-checkbox" %>
+                    <%= f.text_field :sundaytime1, class: "spinner" %>
+                    <%= f.text_field :sundaytime2, class: "spinner" %>
+                  </div>
                 </div>
               </div>
 
-              <div class="col-sm-4">
-                <div class="form-group">
-                  Private
-                  <%= f.check_box :private_twitter, :checked => @user.private_attrs.include?(:twitter) %>
-                  <%= f.text_field :twitter, class: "form-control", placeholder: "Twitter" %>
-                </div>
-
-                <div class=form-group">
-                  Private
-                  <%= f.check_box :private_industry, :checked => @user.private_attrs.include?(:industry) %>
-                  <%= f.text_field :industry, class: "form-control", placeholder: "Industry" %>
-                </div>
-
-                <div class=form-group">
-                  Private
-                  <%= f.check_box :private_job_title, :checked => @user.private_attrs.include?(:job_title) %>
-                  <%= f.text_field :job_title, class: "form-control", placeholder: "Job Title" %>
-                </div>
-
-                <div class=form-group">
-                  Private
-                  <%= f.check_box :private_location, :checked => @user.private_attrs.include?(:location) %>
-                  <%= f.text_field :location, class: "form-control", placeholder: "Location" %>
-                </div>
-
-                <div class=form-group">
-                  Private
-                  <%= f.check_box :private_occupation, :checked => @user.private_attrs.include?(:occupation) %>
-                  <%= f.text_field :occupation, class: "form-control", placeholder:"Occupation" %>
-                </div>
-
-                <div class="form-group">
-                  Private
-                  <%= f.check_box :private_gender, :checked => @user.private_attrs.include?(:gender) %>
-                  <%= f.text_field :gender, class: "form-control", placeholder:"Gender" %>
-                </div>
-
-                <div class=form-group">
-                  Private
-                  <%= f.check_box :private_work_history, :checked => @user.private_attrs.include?(:work_history) %>
-                  <%= f.text_field :work_history, class: "form-control", placeholder:"Work History" %>
-                </div>
-
-               <div class="form-group">
-                 Private
-                 <%= f.check_box :private_years_of_experience, :checked => @user.private_attrs.include?(:years_of_experience) %>
-                 <%= f.number_field :years_of_experience, class: "form-control", placeholder:"years_of_experience" %>
-               </div>
-
-          </div>
-
-              <h3> time available </h3>
-
-              <div class="col-sm-2">
-                <%= f.label :Monday %>
-                <%= f.check_box :monday, class: "time-checkbox" %>
-                <%= f.text_field :mondaytime1, class: "spinner" %>
-                <%= f.text_field :mondaytime2, class: "spinner" %>
-                <%= f.label :Tuesday %>
-                <%= f.check_box :tuesday, class: "time-checkbox" %>
-                <%= f.text_field :tuesdaytime1, class: "spinner" %>
-                <%= f.text_field :tuesdaytime2, class: "spinner" %>
-                <%= f.label :Wednesday %>
-                <%= f.check_box :wednesday, class: "time-checkbox" %>
-                <%= f.text_field :wednesdaytime1, class: "spinner" %>
-                <%= f.text_field :wednesdaytime2, class: "spinner" %>
-                <%= f.label :Thursday %>
-                <%= f.check_box :thursday, class: "time-checkbox" %>
-                <%= f.text_field :thursdaytime1, class: "spinner" %>
-                <%= f.text_field :thursdaytime2, class: "spinner" %>
+              <div class="form-actions">
+                <%= f.button :submit, class: "btn btn-default btn-lg" %>
               </div>
 
-              <div class="col-sm-2">
-                <%= f.label :Friday %>
-                <%= f.check_box :friday, class: "time-checkbox" %>
-                <%= f.text_field :fridaytime1, class: "spinner" %>
-                <%= f.text_field :fridaytime2, class: "spinner" %>
-                <%= f.label :Saturday %>
-                <%= f.check_box :saturday, class: "time-checkbox" %>
-                <%= f.text_field :saturdaytime1, class: "spinner" %>
-                <%= f.text_field :saturdaytime2, class: "spinner" %>
-                <%= f.label :Sunday %>
-                <%= f.check_box :sunday, class: "time-checkbox" %>
-                <%= f.text_field :sundaytime1, class: "spinner" %>
-                <%= f.text_field :sundaytime2, class: "spinner" %>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <%= f.button :submit, class: "btn btn-default btn-lg" %>
-          </div>
-
-      <% end %>
+          <% end %>
+        </div>
     </div>
+
+
   </div>
-
-
 </div>
