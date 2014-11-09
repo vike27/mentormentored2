@@ -18,9 +18,63 @@
                     </div>
 
                     <div class="form-group">
-                      <%= f.label :profile_image, class: "control-label" %>
+                      <%= f.label :profile_image, class: "titles-edit" %>
                       <%= f.file_field :image, class: "profile-picture-upload" %>
-                    </div>        
+                    </div>   
+
+                 <div class="row">
+
+                  <p class="titles-edit"> Times Available: </p>
+
+                  <div class="col-md-6 time-box-container">
+                    <div class="time-box-each">
+                    <%= f.label :Monday %>
+                    <%= f.check_box :monday, class: "time-checkbox" %>
+                    <%= f.text_field :mondaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :mondaytime2, class: "spinner time-box" %>
+                    </div>
+                    <div class="time-box-each">
+                    <%= f.label :Tuesday %>
+                    <%= f.check_box :tuesday, class: "time-checkbox" %>
+                    <%= f.text_field :tuesdaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :tuesdaytime2, class: "spinner time-box" %>
+                    </div>
+                    <div class="time-box-each">
+                    <%= f.label :Wednesday %>
+                    <%= f.check_box :wednesday, class: "time-checkbox" %>
+                    <%= f.text_field :wednesdaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :wednesdaytime2, class: "spinner time-box" %>
+                    </div>
+                    <div class="time-box-each">
+                    <%= f.label :Thursday %>
+                    <%= f.check_box :thursday, class: "time-checkbox" %>
+                    <%= f.text_field :thursdaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :thursdaytime2, class: "spinner time-box" %>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 time-box-container">
+                    <div class="time-box-each">
+                    <%= f.label :Friday %>
+                    <%= f.check_box :friday, class: "time-checkbox" %>
+                    <%= f.text_field :fridaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :fridaytime2, class: "spinner time-box" %>
+                    </div>
+                    <div class="time-box-each">
+                    <%= f.label :Saturday %>
+                    <%= f.check_box :saturday, class: "time-checkbox" %>
+                    <%= f.text_field :saturdaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :saturdaytime2, class: "spinner time-box" %>
+                    </div>
+                    <div class="time-box-each">
+                    <%= f.label :Sunday %>
+                    <%= f.check_box :sunday, class: "time-checkbox" %>
+                    <%= f.text_field :sundaytime1, class: "spinner time-box" %>
+                    <%= f.text_field :sundaytime2, class: "spinner time-box" %>
+                    </div>
+                  </div>
+                </div>
+   
               </div>
         </div>
 
@@ -79,49 +133,8 @@
         </div>
       </div>
 
-      <div class="row">
-
-        <div class="col-md-6 edit-fields-boxes">
-
-                  <h3> time available </h3>
-
-                  <div class="col-sm-3">
-                    <%= f.label :Monday %>
-                    <%= f.check_box :monday, class: "time-checkbox" %>
-                    <%= f.text_field :mondaytime1, class: "spinner" %>
-                    <%= f.text_field :mondaytime2, class: "spinner" %>
-                    <%= f.label :Tuesday %>
-                    <%= f.check_box :tuesday, class: "time-checkbox" %>
-                    <%= f.text_field :tuesdaytime1, class: "spinner" %>
-                    <%= f.text_field :tuesdaytime2, class: "spinner" %>
-                    <%= f.label :Wednesday %>
-                    <%= f.check_box :wednesday, class: "time-checkbox" %>
-                    <%= f.text_field :wednesdaytime1, class: "spinner" %>
-                    <%= f.text_field :wednesdaytime2, class: "spinner" %>
-                    <%= f.label :Thursday %>
-                    <%= f.check_box :thursday, class: "time-checkbox" %>
-                    <%= f.text_field :thursdaytime1, class: "spinner" %>
-                    <%= f.text_field :thursdaytime2, class: "spinner" %>
-                  </div>
-
-                  <div class="col-sm-3">
-                    <%= f.label :Friday %>
-                    <%= f.check_box :friday, class: "time-checkbox" %>
-                    <%= f.text_field :fridaytime1, class: "spinner" %>
-                    <%= f.text_field :fridaytime2, class: "spinner" %>
-                    <%= f.label :Saturday %>
-                    <%= f.check_box :saturday, class: "time-checkbox" %>
-                    <%= f.text_field :saturdaytime1, class: "spinner" %>
-                    <%= f.text_field :saturdaytime2, class: "spinner" %>
-                    <%= f.label :Sunday %>
-                    <%= f.check_box :sunday, class: "time-checkbox" %>
-                    <%= f.text_field :sundaytime1, class: "spinner" %>
-                    <%= f.text_field :sundaytime2, class: "spinner" %>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-actions">
+      
+              <div class="form-actions submit-edit">
                 <%= f.button :submit, class: "btn btn-default btn-lg" %>
               </div>
 
