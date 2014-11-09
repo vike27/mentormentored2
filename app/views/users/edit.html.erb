@@ -1,6 +1,6 @@
 <div class="editprofilebox">
 
-  <h1>Take a moment to fill out your profile:</h1>
+  <h1>Take a moment to fill out your profile</h1>
 
   <div class="edit-container edit-fluid-container"> 
   <%= form_for @user, :html => {:role => 'form', :class => 'form-horizontal', :multipart => true} do |f| %>
@@ -131,9 +131,9 @@
                    </div>
               </div>
 
-              <div class="form-group">
+              <div class="form-group bio">
                       <%= f.label :Bio, class: "titles-edit" %>
-                      <%= f.text_field :summary, class: "form-control edit-field", rows:"3"%>
+                      <%= f.text_area :summary, class: "form-control edit-field-bio", rows:"7"%>      
               </div> 
         </div>
       </div>
