@@ -130,6 +130,11 @@
                      <%= f.check_box :private_years_of_experience, :checked => @user.private_attrs.include?(:years_of_experience) %>
                    </div>
               </div>
+
+              <div class="form-group">
+                      <%= f.label :Bio, class: "titles-edit" %>
+                      <%= f.text_field :summary, class: "form-control edit-field", rows:"3"%>
+              </div> 
         </div>
       </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141026131708) do
+ActiveRecord::Schema.define(version: 20141109003436) do
 
   create_table "mailboxer_conversation_opt_outs", force: true do |t|
     t.integer "unsubscriber_id"
@@ -105,18 +105,19 @@ ActiveRecord::Schema.define(version: 20141026131708) do
     t.boolean  "sunday"
     t.text     "sundaytime1"
     t.text     "sundaytime2"
-    t.string   "job_title"
-    t.string   "industry"
-    t.string   "location"
     t.string   "occupation"
     t.string   "gender"
     t.string   "work_history"
     t.decimal  "years_of_experience"
+    t.string   "job_title"
+    t.string   "industry"
+    t.string   "location"
     t.string   "private_attrs",          default: "--- []\n"
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.text     "summary"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
