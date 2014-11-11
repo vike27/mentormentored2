@@ -20,6 +20,9 @@
                     <div class="form-group">
                       <%= f.label :profile_image, class: "titles-edit" %>
                       <%= f.file_field :image, class: "profile-picture-upload" %>
+                      <div class="profile-image-box" >
+                        <%= image_tag f.object.image.thumb('150x185#').url if f.object.image_stored? %>
+                      </div>
                     </div>   
 
                  <div class="row">
