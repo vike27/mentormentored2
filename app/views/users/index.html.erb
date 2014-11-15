@@ -51,14 +51,14 @@
           <a class="pull-left">
             
             <p>
-            <%= image_tag user.image.try(:thumb,'50x50#').url, alt: "logo-image", class:'media-object img-circle' %>
+            <%= image_tag user.image.try(:thumb,'80x80#').url, alt: "logo-image", class:'media-object img-circle' %>
           </p>
             
           </a>
           <div class="media-body">
-            <h4 class="media-heading"><%= user.full_name %>  <button type="button" class="btn btn-default btn-xs">Message</button></h4>
+            <h4 class="media-heading"><%= user.full_name %>  <button type="button" class="btn btn-default btn-xs">Message</button> <button type="button" class="btn btn-default btn-xs">Go to Profile</button></h4>
             </div>
-              <p>Job Title:<%= user.job_title %> Location:<%= user.location %>  Industry:<%= user.industry %></p>
+              <p><b>Job Title:</b> <%= user.job_title %> </br> <b>Location:</b> <%= user.location %> </br> <b>Industry:</b> <%= user.industry %></p>
           </div>
         </div>
       <% end %>

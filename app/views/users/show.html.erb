@@ -10,7 +10,7 @@
     <div class="row ">
 
       <div class="profile-image-box col-sm-4" >
-        <%= image_tag @user.image.thumb('150x185#').url if @user.image_stored? %>
+        <%= image_tag @user.image.thumb('100x100#').url, class:'media-object img-circle' if @user.image_stored? %>
       </div>
 
       <div class="profile-info-box col-sm-8">
