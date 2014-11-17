@@ -23,7 +23,7 @@
                       <%= f.file_field :image, class: "profile-picture-upload" %>
                       </div>
                       <div class="col-md-6 profile-image-box" >
-                        <%= image_tag f.object.image.thumb('50x50#').url, class:'media-object img-circle' if f.object.image_stored? %>
+                        <%= image_tag f.object.image.thumb('50x50#').url, class:'media-object img-circle' if f.object.image.present? %>
                       </div>
                     </div>   
 
@@ -37,7 +37,7 @@
                     <%= f.check_box :monday, class: "time-checkbox" %>
                     <%= f.text_field :mondaytime1, class: "spinner time-box" %>
                     <%= f.text_field :mondaytime2, class: "spinner time-box" %>
-                    </div>
+                    </div>g
                     <div class="time-box-each">
                     <%= f.label :Tuesday %>
                     <%= f.check_box :tuesday, class: "time-checkbox" %>
