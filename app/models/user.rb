@@ -20,13 +20,14 @@ class User < ActiveRecord::Base
 
   before_save :set_private_attributes
 
-  def self.search(search)
+  def self.search(search, user_id)
     scope = User.order(:first_name)
     scope.where!("first_name LIKE ?", "%#{search[:first_name]}%") if search[:first_name].present?
     scope.where!("last_name LIKE ?", "%#{search[:last_name]}%") if search[:last_name].present?
     scope.where!("job_title LIKE ?", "%#{search[:job_title]}%") if search[:job_title].present?
     scope.where!("industry LIKE ?", "%#{search[:industry]}%") if search[:industry].present?
     scope.where!("location LIKE ?", "%#{search[:location]}%") if search[:location].present?
+    scope.where!.not(id: user_id)
     if search[:week_day].present? && search[:time_availability].blank?
       scope.where!(DAYS_HASH[search[:week_day]][0] => true)
     elsif search[:week_day].present? && search[:time_availability].present?
