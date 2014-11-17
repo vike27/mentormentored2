@@ -52,18 +52,19 @@
             
             <p>
             <%= image_tag user.image.thumb('80x80#').url , alt: "logo-image", class:'media-object img-circle' if user.image.present? %>
-          </p>
+            </p>
             
           </a>
           <div class="media-body">
             <h4 class="media-heading"><%= user.full_name %>  <button type="button" class="btn btn-default btn-xs">Message</button> <button type="button" class="btn btn-default btn-xs">Go to Profile</button></h4>
-            </div>
-              <p><b>Job Title:</b> <%= user.job_title %> </br> <b>Location:</b> <%= user.location %> </br> <b>Industry:</b> <%= user.industry %></p>
           </div>
+              <p><b>Job Title:</b> <%= user.job_title %> </br> <b>Location:</b> <%= user.location %> </br> <b>Industry:</b> <%= user.industry %></p>
         </div>
-      <% end %>
-
+        <% end %>
     </div>
+      
+
+
   </div>
 
 </div>
