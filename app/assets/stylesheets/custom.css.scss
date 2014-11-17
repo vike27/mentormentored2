@@ -28,7 +28,6 @@
 	margin-left: auto;
     margin-right: auto;
 	text-align:center;
-	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: bold;
 	font-size: 25px;
 }
@@ -36,17 +35,19 @@
 .profile-container {
 	padding-bottom: 70px;
 	padding-top: 70px;
+	margin-left: auto;
+    margin-right: auto;
+	width: 800px;
 }
 
 .profile-image-box {
 	margin-left: auto;
     margin-right: auto;
-	text-align:center;
+	text-align: center;
 }
 
 .profile-info-box {
-	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 25px;
+	font-size: 14px;
 }
 
 .profile-extra-box {
@@ -55,9 +56,20 @@
 	text-align:center;
 	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 14px;
 	padding-top: 5px;
 	padding-bottom: 30px;
+}
+
+.profile-box1 {
+	padding-top: 40px;
+	text-align: left;
+	padding-left: 5px;
+
+}
+
+.profile-fields {
+	padding-bottom: 10px;
 }
 
 
@@ -144,6 +156,11 @@
 	padding-left: 15px;
 	padding-right: 95px;
 }
+
+.image-upload {
+	padding: 0px;
+}
+
 
 
 /*----header-----*/
@@ -458,10 +475,11 @@
 /*---- Contact Page -----*/
 
 .contact-container {
-	margin-top: 70px;
-	padding-bottom: 20px;
+	margin-top: 120px;
+	margin-bottom: 80px;
 	margin-left: auto;
 	margin-right: auto;
+	width: 1000px;
 }
 
 .contact-container > h1 {
@@ -483,6 +501,19 @@
 	margin-left: auto;
 	margin-right: auto;	
 	width: 1200px;
+}
+
+.contact-us-form {
+	margin: 0 auto; 
+	width: 300px;
+	color: white;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.contact-side h3 {
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 /*----- Sign in ------*/

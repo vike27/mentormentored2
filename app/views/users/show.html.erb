@@ -1,7 +1,7 @@
 <div class="profilebox">
 
   <div class="profile-title-box" >
-    <%= @user.first_name %> <%= @user.last_name %> profile
+    <%= @user.first_name %> <%= @user.last_name %> 
   </div>
   <hr>
 
@@ -11,32 +11,45 @@
 
       <div class="profile-image-box col-sm-4" >
         <%= image_tag @user.image.thumb('100x100#').url, class:'media-object img-circle' if @user.image_stored? %>
-      </div>
+      
+        <div class="profile-box1">
+          <button type="button" class="btn btn-default">
+          <% if @user != current_user %>
+            <%= link_to 'Message', new_conversation_path(user_id: @user) %>
+            </br>
+          <% else %>
+            <%= link_to conversations_path  do %>
+              Inbox
+              <span class="badge"><%= @unread_messages %></span>
+            <% end %>
+          <% end %>
+        </button>
+        </div>
+
+       </div>
 
       <div class="profile-info-box col-sm-8">
+        <div class="profile-fields">
         <%= show_if_allowed(@user, :email) %>
-        </br>
-        <%= @user.first_name %>
-        </br>
-        <%= @user.last_name %>
-        </br>
+        </div>
+        <div class="profile-fields">
         <%= show_if_allowed(@user, :occupation) %>
-        </br>
+        </div>
+        <div class="profile-fields">
+        <%= show_if_allowed(@user, :occupation) %>
+        </div>
+        <div class="profile-fields">
         <%= show_if_allowed(@user, :gender) %>
-        </br>
+        </div>
+        <div class="profile-fields">
         <%= show_if_allowed(@user, :work_history) %>
-        </br>
+        </div>
+        <div class="profile-fields">
         <%= show_if_allowed(@user, :years_of_experience) %>
-        </br>
-        <% if @user != current_user %>
-          <%= link_to 'Start Conversation', new_conversation_path(user_id: @user) %>
-          </br>
-        <% else %>
-          <%= link_to conversations_path  do %>
-            Inbox
-            <span class="badge"><%= @unread_messages %></span>
-          <% end %>
-        <% end %>
+        </div>
+        <div class="profile-fields">
+        <%= show_if_allowed(@user, :summary) %>
+        </div>
       </div>
 
     </div>

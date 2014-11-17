@@ -1,0 +1,47 @@
+<div class="contact-container">
+
+  <div class="row">
+
+    <div class="col-md-6">
+
+    <%= form_for @message, :url => contact_path do |form| %>
+      <fieldset class="fields">
+        <div class="form-group field">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control" %>
+        </div>
+        
+        <div class="form-group field">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group field">
+          <%= form.label :subject %>
+          <%= form.text_field :subject, class: "form-control" %>
+        </div>
+        
+        <div class="form-group field">
+          <%= form.label :body %>
+          <%= form.text_area :body, class: "form-control", rows:"5"%>
+        </div>
+      </fieldset>
+      
+      <div class="form-actions">
+                <%= form.button :send, class: "btn btn-default" %>
+       </div>
+  
+    <% end %>
+
+    </div>
+
+
+    <div class="col-md-6 contact-side">
+
+      <h3>Have a question? Send us a note. We'll get back to you, promise!</h3>
+
+       <%= image_tag("whitenetwork_cutout3.png", alt: "logo-image", class:'img-responsive logo') %>
+    </div>
+
+
+  </div>
+</div>

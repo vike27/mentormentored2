@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   get '/about',   to: 'pages#about'
   get '/index',   to: 'pages#index'
-  get '/contact',   to: 'pages#contact'
   get '/faq',   to: 'pages#faq'
 
   resources :users
+  resource :contact, only: [:new, :create]
 
   resources :conversations, only: [:index, :show, :new, :create] do
     member do
