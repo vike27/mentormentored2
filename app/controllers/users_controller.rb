@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def index
     if params[:search].present?
       if params[:search].values.any? { |i| i.present? }
-        @users = User.search(params[:search], current_user.id)
+        @users = User.search(params[:search], current_user)
       else
         recommend_user
       end
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     def recommend_user
       if current_user
         params[:search][:location] = current_user.location
-        @users = User.search(params[:search], current_user.id)
+        @users = User.search(params[:search], current_user)
       else
         @users = []
       end
